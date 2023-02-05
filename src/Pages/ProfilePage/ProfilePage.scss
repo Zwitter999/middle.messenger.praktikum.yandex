@@ -1,0 +1,60 @@
+@import './../../utils/variables';
+
+$avatar-cicrle: 10em;
+
+.profile-page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60em;
+  height: calc(100vh - $header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .profile-page__avatar {
+    width: $avatar-cicrle;
+    height: $avatar-cicrle;
+    border-radius: 50%;
+    background-color: $light-color;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    .avatar__text {
+      font-size: 24px;
+      display: none;
+    }
+  }
+  .profile-page__avatar:hover {
+    background-color: $dark-color;
+    border: $light-color solid 5px;
+    cursor: pointer;
+    .avatar__text {
+      display: block;
+    }
+  }
+  .profile-page__name {
+    font-size: 40px;
+  }
+  .profile-page__info {
+    background-color: $light-color;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    .info__item {
+      border: $dark-color solid 1px;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      padding: 0 5px;
+      margin: 0.5em 0;
+    }
+    .info__buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
