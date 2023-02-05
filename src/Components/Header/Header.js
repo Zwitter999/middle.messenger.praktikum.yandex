@@ -5,21 +5,21 @@ function Header() {
   const template = `
     <div class="header">
       <nav>
-        <button onclick="ChatsPage()">1</button>
-        <button onclick="ChatsPage(true)">2</button>
-        <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer')">3</button>
-        <button onclick="ChangeAvatarModal('File downloaded', 'test.png')">4</button>
-        <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer', 'need select file')">5</button>
-        <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer', 'error try again')">6</button>
-        <button onclick="AddDeleteUserModal(true)">7</button>
-        <button onclick="AddDeleteUserModal(false)">8</button>
-        <button onclick="ProfilePage();">9</button>
-        <button onclick="ProfilePage(true);">10</button>
-        <button onclick="LoginPage()">11</button>
-        <button onclick="LoginPage(true)">12</button>
-        <button onclick=" SignupPage()">13</button>
-        <button onclick="NotFoundPage()">14</button>
-        <button onclick="ServerErrorPage()">15</button>
+        <button onclick="ChatsPage()">Page</button>
+        <button onclick="ChatsPage(true)">Page</button>
+        <button onclick="ProfilePage();">Page</button>
+        <button onclick="ProfilePage(true);">Page</button>
+        <button onclick="LoginPage()">Page</button>
+        <button onclick="LoginPage(true)">Page</button>
+        <button onclick=" SignupPage()">Page</button>
+        <button onclick="NotFoundPage()">Page</button>
+        <button onclick="ServerErrorPage()">Page</button>
+        <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer')">Modal</button>
+        <button onclick="ChangeAvatarModal('File downloaded', 'test.png')">Modal</button>
+        <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer', 'need select file')">Modal</button>
+        <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer', 'error try again')">Modal</button>
+        <button onclick="AddDeleteUserModal(true)">Modal</button>
+        <button onclick="AddDeleteUserModal(false)">Modal</button>
       </nav>
     </div>
     `;

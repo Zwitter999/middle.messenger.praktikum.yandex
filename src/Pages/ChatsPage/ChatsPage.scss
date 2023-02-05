@@ -12,6 +12,21 @@ $small-circle: 2em;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 50px);
+    .sidebar__search {
+      padding: 2px 5px;
+      border-top: solid 1px $dark-color;
+      display: flex;
+      input {
+        width: 100%;
+        margin-left: .25em;
+        background-color: transparent;
+        font-size: 20px;
+        color: #FFFFFF;
+      }
+      svg:hover{
+        cursor: pointer;
+      }
+    }
     .sidebar__button {
       font-size: 20px;
       border-left: 0;

@@ -22,7 +22,7 @@ function App() {
   // Header для удобства просмотра страниц при code review,
   // после сдачи первого спринта будет удален
   Header();
-  //   ChatsPage();
+    // ChatsPage();
   //   ChatsPage(true);
   //   ChangeAvatarModal('Upload file', 'upload file from computer');
   // ChangeAvatarModal('File downloaded', 'test.png');
