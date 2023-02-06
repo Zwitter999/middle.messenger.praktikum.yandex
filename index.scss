@@ -65,3 +65,15 @@ button:hover {
   background-color: $medium-color !important;
   cursor: pointer;
 }
+
+.modal-window {
+  border-radius: 10px;
+  background-color: $light-color;
+  width: 30em;
+  min-height: 20em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px 10px;
+}

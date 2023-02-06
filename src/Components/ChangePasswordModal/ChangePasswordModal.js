@@ -1,4 +1,3 @@
-import './ChangePasswordModal.scss';
 import Modal from '../utils/Modal/Modal';
 import Button from '../utils/Button/Button';
 import Input from '../utils/Input/Input';
