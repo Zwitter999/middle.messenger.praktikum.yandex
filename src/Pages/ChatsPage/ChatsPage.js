@@ -101,4 +101,3 @@ function ChatsPage(plug = false) {
 }
 
 export default ChatsPage;
-// document.getElementsByTagName('main')[0].innerHTML = chatsMarkup;

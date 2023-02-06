@@ -9,13 +9,13 @@ function Modal(modalContent, title) {
             {{ modalContent }}
         </div>
       </div>
-    `;
+  `;
 
-  const chatsTemplate = new Templator(template);
+  const modalTemplate = new Templator(template);
 
-  const chatsMarkup = chatsTemplate.compile({ modalContent, title });
+  const modalMarkup = modalTemplate.compile({ modalContent, title });
 
-  document.getElementById('root').innerHTML += chatsMarkup;
+  document.getElementById('root').innerHTML += modalMarkup;
 }
 
 export default Modal;

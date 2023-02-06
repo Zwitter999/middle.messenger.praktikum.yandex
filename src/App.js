@@ -22,22 +22,6 @@ function App() {
   // Header для удобства просмотра страниц при code review,
   // после сдачи первого спринта будет удален
   Header();
-    // ChatsPage();
-  //   ChatsPage(true);
-  //   ChangeAvatarModal('Upload file', 'upload file from computer');
-  // ChangeAvatarModal('File downloaded', 'test.png');
-  // ChangeAvatarModal('Upload file', 'upload file from computer', 'need select file');
-  // ChangeAvatarModal('Upload file', 'upload file from computer', 'error try again');
-  //   AddDeleteUserModal(true);
-  //   AddDeleteUserModal(false);
-  //   ProfilePage();
-  //   ProfilePage(true);
-  //   ChangePasswordModal();
-  //   LoginPage();
-  //   LoginPage(true);
-  //   SignupPage();
-  //   NotFoundPage();
-  //   ServerErrorPage(501);
 }
 
 export default App;
