@@ -1,9 +1,8 @@
 import Templator from '../../../utils/Templator';
-import { html } from 'lit-element';
 import './Button.scss';
 
-function Button(title) {
-  const template = html`<button class="button">{{ title }}</button>`.strings[0];
+function Button(title, type = '') {
+  const template = `<button class="button" type=${type}>{{ title }}</button>`;
 
   const chatsTemplate = new Templator(template);
 

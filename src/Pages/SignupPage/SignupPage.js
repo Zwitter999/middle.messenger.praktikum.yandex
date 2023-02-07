@@ -4,13 +4,15 @@ import ModalPage from '../../Components/utils/ModalPage/ModalPage';
 
 function SignupPage() {
   const template = `
-        ${Input('Name...')} 
-        ${Input('Sacond name...')}
-        ${Input('Login...')}
-        ${Input('Email...')}
-        ${Input('Password...')}
-        ${Input('Repeat password...')}
-        ${Button('Signup')}
+    <form class="modal-form">
+      ${Input('Name...', 'first_name')} 
+      ${Input('Sacond name...', 'second_name')}
+      ${Input('Login...', 'login')}
+      ${Input('Email...', 'email')}
+      ${Input('Password...', 'password')}
+      ${Input('Phone number', 'phone')}
+      ${Button('Signup', 'submit')}
+    </form>
   `;
 
   ModalPage('Signup', template);

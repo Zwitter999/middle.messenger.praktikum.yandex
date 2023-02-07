@@ -29,3 +29,7 @@
 ## Команда
 
 Yandex practicum team
+
+## Продашкн
+
+[Netlify](https://benevolent-duckanoo-942326.netlify.app/)

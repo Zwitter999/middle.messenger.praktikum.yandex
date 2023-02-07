@@ -1,6 +1,6 @@
 import Templator from '../../../utils/Templator';
 import './ErrorText.scss';
-import { html } from 'lit-element';
+import { html } from 'lit';
 
 function ErrorText(text) {
   const template = html`<div class="error-text">{{ text }}</div>`.strings[0];

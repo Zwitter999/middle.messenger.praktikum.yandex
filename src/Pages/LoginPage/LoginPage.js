@@ -5,11 +5,13 @@ import ModalPage from '../../Components/utils/ModalPage/ModalPage';
 
 function LoginPage(isErrors = false) {
   const template = `
-        ${Input('Login...')}
+      <form class="modal-form">
+        ${Input('Login...', 'login')}
         ${isErrors ? ErrorText('invalid login') : ''}
-        ${Input('Password...')}
+        ${Input('Password...', 'password')}
         ${isErrors ? ErrorText('invalid password') : ''}
-        ${Button('Login')}
+        ${Button('Login', 'submit')}
+      </form>
   `;
 
   ModalPage('Login', template);
