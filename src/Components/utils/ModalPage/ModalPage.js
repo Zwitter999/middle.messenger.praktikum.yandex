@@ -5,7 +5,7 @@ function ModalPage(title, content) {
   const template = `
       <div class="modal-page">
         <div class="modal-page__modal modal-window">
-          <div>{{ title }}</div>
+          <h1>{{ title }}</h1>
           {{ content }}
         </div>
       </div>

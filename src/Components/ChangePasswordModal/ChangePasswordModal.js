@@ -4,9 +4,11 @@ import Input from '../utils/Input/Input';
 
 function ChangePasswordModal() {
   const modalContent = `
-    ${Input('Old password')}
-    ${Input('New password')}
-    ${Button('Change')}
+    <form class="modal-form">
+      ${Input('Old password', 'oldPassword')}
+      ${Input('New password', 'newPassword')}
+      ${Button('Change', 'submit')}
+    </form>
   `;
   Modal(modalContent, 'Change password');
 }
