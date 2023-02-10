@@ -1,0 +1,45 @@
+@import './../../../utils//variables';
+
+.modal {
+  height: calc(100vh - $header-height);
+  margin-top: $header-height;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8000;
+  transition: all 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  .modal__container {
+    transform: scale(0.5);
+    transition: all 0.4s;
+
+    .modal__title {
+      font-size: 36px;
+    }
+
+    * {
+      margin: 0.5em 0;
+    }
+
+    :first-child {
+      margin-top: 1em;
+    }
+  }
+  .modal__content-active {
+    transform: scale(1);
+    margin: 1em;
+  }
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}

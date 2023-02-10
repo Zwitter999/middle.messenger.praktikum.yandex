@@ -1,0 +1,14 @@
+@import './../../utils//variables.scss';
+
+.header {
+  height: $header-height;
+  background-color: $light-color;
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    button {
+      padding: 10px 20px;
+    }
+  }
+}
