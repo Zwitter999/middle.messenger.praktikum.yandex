@@ -2,7 +2,7 @@ import Templator from '../../utils/Templator';
 import './ProfilePage.scss';
 import Button from '../../Components/utils/Button/Button';
 
-function ProfileInfoItem(key, value, isEditMode = false, name = '') {
+function ProfileInfoItem(key: string, value: string, isEditMode = false, name = '') {
   return `
     <div class="info__item">
     <span>${key}</span>

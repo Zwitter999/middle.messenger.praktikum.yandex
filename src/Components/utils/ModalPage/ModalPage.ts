@@ -1,7 +1,7 @@
 import './ModalPage.scss';
 import Templator from '../../../utils/Templator';
 
-function ModalPage(title, content) {
+function ModalPage(title: string, content: string) {
   const template = `
       <div class="modal-page">
         <div class="modal-page__modal modal-window">

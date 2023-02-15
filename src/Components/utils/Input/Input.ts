@@ -2,7 +2,7 @@ import { html } from 'lit';
 import Templator from '../../../utils/Templator';
 import './Input.scss';
 
-function Input(placeholder, name = '', type = '') {
+function Input(placeholder: string, name = '', type = '') {
   const template = html` <input class="input" placeholder="{{ placeholder }}" name="{{ name }}" type="{{ type }}" /> `
     .strings[0];
 

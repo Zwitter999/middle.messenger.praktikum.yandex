@@ -1,11 +1,11 @@
 import Templator from '../../utils/Templator';
 import './ChatsPage.scss';
 
-function SideBarButton(text) {
+function SideBarButton(text: string) {
   return `<button class="sidebar__button chat-page__button">${text}</button>`;
 }
 
-function Chat(name, message = '', notification = 0) {
+function Chat(name: string, message = '', notification = 0) {
   return `
     <div class="chat">
       <div class="chat__avatar"></div>
@@ -18,7 +18,7 @@ function Chat(name, message = '', notification = 0) {
   `;
 }
 
-function Message(text, author) {
+function Message(text: string, author: string) {
   return `
     <div class="message">
       <div class="message__avatar"></div>
@@ -27,7 +27,7 @@ function Message(text, author) {
   `;
 }
 
-function HeaderMenuButton(text) {
+function HeaderMenuButton(text: string) {
   return `
     <div class="menu_button chat-page__button">${text}</div>
   `;

@@ -3,7 +3,7 @@ import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
 import ErrorText from '../ErrorText/ErrorText';
 
-function ChangeAvatarModal(title, text, errorText = '') {
+function ChangeAvatarModal(title: string, text: string, errorText = '') {
   const modalContent = `
   <form class="modal-form">
     <div class="load-file">

@@ -17,6 +17,7 @@ window.LoginPage = LoginPage;
 window.SignupPage = SignupPage;
 window.NotFoundPage = NotFoundPage;
 window.ServerErrorPage = ServerErrorPage;
+window.ChangePasswordModal = ChangePasswordModal;
 
 function App() {
   // Header для удобства просмотра страниц при code review,

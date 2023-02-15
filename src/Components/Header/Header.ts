@@ -20,6 +20,7 @@ function Header() {
         <button onclick="ChangeAvatarModal('Upload file', 'upload file from computer', 'error try again')">Modal</button>
         <button onclick="AddDeleteUserModal(true)">Modal</button>
         <button onclick="AddDeleteUserModal(false)">Modal</button>
+        <button onclick="ChangePasswordModal()">Modal</button>
       </nav>
     </div>
     `;

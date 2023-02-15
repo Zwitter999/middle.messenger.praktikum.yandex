@@ -1,7 +1,7 @@
-import Templator from './../../../utils/Templator';
+import Templator from '../../../utils/Templator';
 import './Modal.scss';
 
-function Modal(modalContent, title) {
+function Modal(modalContent: string, title: string) {
   const template = `
       <div class="modal modal-active">
         <div class="modal__container modal__content-active modal-window">
@@ -15,7 +15,7 @@ function Modal(modalContent, title) {
 
   const modalMarkup = modalTemplate.compile({ modalContent, title });
 
-  document.getElementById('root').innerHTML += modalMarkup;
+  document.getElementById('root')!.innerHTML += modalMarkup;
 }
 
 export default Modal;

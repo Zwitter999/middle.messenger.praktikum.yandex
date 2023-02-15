@@ -2,7 +2,7 @@ import Templator from '../../../utils/Templator';
 import './ErrorText.scss';
 import { html } from 'lit';
 
-function ErrorText(text) {
+function ErrorText(text: string) {
   const template = html`<div class="error-text">{{ text }}</div>`.strings[0];
 
   const chatsTemplate = new Templator(template);
