@@ -1,6 +1,7 @@
-@import './../../../utils/variables';
+@import "./../../../utils/variables";
+
 .error-text {
-  color: $danger-color;
   width: 100%;
   text-align: center;
+  color: $danger-color;
 }

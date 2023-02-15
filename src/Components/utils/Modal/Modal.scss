@@ -1,21 +1,22 @@
-@import './../../../utils//variables';
+@import "./../../../utils//variables";
 
 .modal {
-  height: calc(100vh - $header-height);
-  margin-top: $header-height;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
+  z-index: 8000;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 8000;
-  transition: all 0.5s;
+  margin-top: $header-height;
+  width: 100vw;
+  height: calc(100vh - $header-height);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
-  pointer-events: none;
   visibility: hidden;
+  transition: all 0.5s;
+  pointer-events: none;
+
   .modal__container {
     transform: scale(0.5);
     transition: all 0.4s;
@@ -32,9 +33,10 @@
       margin-top: 1em;
     }
   }
+
   .modal__content-active {
-    transform: scale(1);
     margin: 1em;
+    transform: scale(1);
   }
 }
 

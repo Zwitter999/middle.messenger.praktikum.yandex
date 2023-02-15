@@ -1,11 +1,11 @@
-@import './../../../utils//variables';
+@import "./../../../utils//variables";
 
 .button {
-  font-size: 20px;
-  background-color: $dark-color;
   border-radius: 10px;
   padding: 5px 10px;
   width: auto;
   min-width: 6em;
+  font-size: 20px;
   white-space: nowrap;
+  background-color: $dark-color;
 }
