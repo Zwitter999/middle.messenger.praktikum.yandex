@@ -105,15 +105,15 @@ class ProfilePage extends Block<ProfilePageProps> {
       Anatoli
     </div>
       <form class="profile-page__info">
-      ${this.props.isEditMode ? '{{ form }}' : '{{ items }}'}
-        ${
-          this.props.isEditMode &&
-          `<div class="info__buttons">
-            {{ changeProfile }}
-            {{ changePassword }}
-        </div>
-        {{ logout }}`
-        }
+      ${
+        this.props.isEditMode
+          ? '{{ form }}'
+          : `{{ items }}<div class="info__buttons">
+      {{ changeProfile }}
+      {{ changePassword }}
+  </div>
+  {{ logout }}`
+      }
       </form>
     </div>
     `;
