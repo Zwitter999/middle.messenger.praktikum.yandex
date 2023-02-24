@@ -103,8 +103,7 @@ class Block<P extends Record<string, any> = any> {
 
   // eslint-disable-next-line no-unused-vars
   protected componentDidUpdate(oldProps: P, newProps: P) {
-    // return JSON.stringify(oldProps) !== JSON.stringify(newProps);
-    return true;
+    return JSON.stringify(oldProps) !== JSON.stringify(newProps);
   }
 
   setProps = (nextProps: Partial<P>) => {
@@ -123,12 +122,10 @@ class Block<P extends Record<string, any> = any> {
     const fragment = this.render();
 
     const newElement = fragment.firstElementChild as HTMLElement;
-    // console.log(newElement);
 
     if (this._element && newElement) {
       this._element.replaceWith(newElement);
     }
-    // console.log(this._element, newElement);
 
     this._element = newElement;
 
@@ -185,7 +182,6 @@ class Block<P extends Record<string, any> = any> {
   }
 
   _makePropsProxy(props: P) {
-    // Ещё один способ передачи this, но он больше не применяется с приходом ES6+
     const self = this;
 
     return new Proxy(props, {
@@ -198,8 +194,6 @@ class Block<P extends Record<string, any> = any> {
 
         target[prop as keyof P] = value;
 
-        // Запускаем обновление компоненты
-        // Плохой cloneDeep, в следующей итерации нужно заставлять добавлять cloneDeep им самим
         self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
         return true;
       },

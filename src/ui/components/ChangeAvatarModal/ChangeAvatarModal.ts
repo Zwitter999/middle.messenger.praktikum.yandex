@@ -23,7 +23,7 @@ class ChangeAvatarModal extends Block<ChangeAvatarModalProps> {
       events: {
         click: event => {
           event.preventDefault();
-          ValidateFormsController.onSubmit(this, event.currentTarget.parentNode);
+          ValidateFormsController.onSubmit(this);
         },
       },
     });

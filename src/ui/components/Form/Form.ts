@@ -1,13 +1,14 @@
 import Block from '../../utils/Block';
 import Button from '../../components/Button/Button';
 import { InputProps } from '../../components/Input/Input';
+import { ProfileInputProps } from '../../pages/ProfilePage/ProfilePage';
 import ValidateFormsController from '../../../controllers/validateFormsController';
 import InputWithError from '../InputWithError/InputWithError';
 import './Form';
 
 interface FormProps {
   buttonName: string;
-  inputs: InputProps[];
+  inputs: InputProps[] | ProfileInputProps[];
   type?: string;
 }
 
@@ -28,7 +29,7 @@ class Form extends Block<FormProps> {
       },
     });
 
-    this.children.inputs = this.props.inputs.map((input: InputProps) => {
+    this.children.inputs = this.props.inputs.map((input: InputProps | ProfileInputProps) => {
       return new InputWithError({
         type: this.props?.type || 'normal',
         input,

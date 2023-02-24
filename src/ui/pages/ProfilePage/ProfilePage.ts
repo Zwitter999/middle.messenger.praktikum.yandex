@@ -70,8 +70,8 @@ class ProfilePage extends Block<ProfilePageProps> {
     this.children.changeProfile = new Button({
       label: 'Change profile',
       events: {
-        click: event => {
-          console.log(event);
+        click: () => {
+          this.setProps({ isEditMode: true });
         },
       },
     });
@@ -107,9 +107,8 @@ class ProfilePage extends Block<ProfilePageProps> {
       <form class="profile-page__info">
       ${this.props.isEditMode ? '{{ form }}' : '{{ items }}'}
         ${
-          this.props.isEditMode
-            ? ``
-            : `<div class="info__buttons">
+          this.props.isEditMode &&
+          `<div class="info__buttons">
             {{ changeProfile }}
             {{ changePassword }}
         </div>

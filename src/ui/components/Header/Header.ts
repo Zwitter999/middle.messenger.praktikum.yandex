@@ -12,7 +12,7 @@ class Header extends Block {
     this.children.login = new Button({
       label: 'Login',
       events: {
-        click: event => {
+        click: () => {
           renderDOM('login');
         },
       },
@@ -20,7 +20,7 @@ class Header extends Block {
     this.children.signup = new Button({
       label: 'Signup',
       events: {
-        click: event => {
+        click: () => {
           renderDOM('signup');
         },
       },
@@ -28,7 +28,7 @@ class Header extends Block {
     this.children.profile = new Button({
       label: 'Profile',
       events: {
-        click: event => {
+        click: () => {
           renderDOM('profile');
         },
       },
@@ -36,7 +36,7 @@ class Header extends Block {
     this.children.chats = new Button({
       label: 'Chats',
       events: {
-        click: event => {
+        click: () => {
           renderDOM('chats');
         },
       },
@@ -44,7 +44,7 @@ class Header extends Block {
     this.children.notFound = new Button({
       label: 'Not found',
       events: {
-        click: event => {
+        click: () => {
           renderDOM('notFound');
         },
       },
@@ -52,7 +52,7 @@ class Header extends Block {
     this.children.serverError = new Button({
       label: 'Server error',
       events: {
-        click: event => {
+        click: () => {
           renderDOM('serverError');
         },
       },

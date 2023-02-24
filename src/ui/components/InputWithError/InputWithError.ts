@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/named
 import Block from '../../utils/Block';
 import Input, { InputProps } from '../Input/Input';
 import ErrorText, { ErrorTextProps } from '../Errortext/ErrorText';
@@ -21,10 +22,9 @@ class InputWithError extends Block<InputWithErrorProps> {
     this.children.inputChild =
       this.props.type === 'profile'
         ? new ProfileInput({
-            ...this.props.input,
+            ...(this.props.input as ProfileInputProps),
             events: {
               focus: (event: any) => {
-                console.log(event.target.value, event.target.name);
                 ValidateFormsController.onBlurFocus(this.children.errorText, event.target.value, event.target.name);
                 event.target.focus();
               },
@@ -34,7 +34,7 @@ class InputWithError extends Block<InputWithErrorProps> {
             },
           })
         : new Input({
-            ...this.props.input,
+            ...(this.props.input as InputProps),
             events: {
               focus: (event: any) => {
                 ValidateFormsController.onBlurFocus(this.children.errorText, event.target.value, event.target.name);
@@ -61,5 +61,4 @@ class InputWithError extends Block<InputWithErrorProps> {
     return this.compile(template, { ...this.props });
   }
 }
-// ${this.props.errorText?.text ? 'errorText' : ''}
 export default InputWithError;
