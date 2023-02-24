@@ -1,0 +1,26 @@
+@import './../../utils/_variables.scss';
+
+.modal-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 30em;
+  height: calc(100vh - $header-height);
+
+  .modal-page__modal {
+    input,
+    button {
+      margin: 0.5em 0;
+    }
+
+    :nth-child(2) {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    :first-child {
+      margin-bottom: 0.5em;
+    }
+  }
+}

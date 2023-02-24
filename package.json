@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html --open",
-    "build": "parcel build index.html --dist-dir=build",
+    "dev": "parcel index.html --open --no-cache",
+    "build": "parcel build index.html --dist-dir=build --no-cache",
     "start": "npm run build && node ./server.ts"
   },
   "keywords": [],
@@ -36,6 +36,7 @@
     "stylelint-scss": "^4.4.0"
   },
   "dependencies": {
-    "lit": "2.6.1"
+    "lit": "2.6.1",
+    "nanoid": "^4.0.1"
   }
 }

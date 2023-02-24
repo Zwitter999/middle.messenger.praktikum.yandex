@@ -1,7 +1,7 @@
-[Sprint_1](https://github.com/Zwitter999/middle.messenger.praktikum.yandex/pull/3)
-===
+# [Sprint_1](https://github.com/Zwitter999/middle.messenger.praktikum.yandex/pull/3)
 
 ## Бейджи
+
 ![](https://img.shields.io/badge/node-v16.13.0-brightgreen)![](https://img.shields.io/bower/l/mi)![](https://img.shields.io/npm/dependency-version/eslint-config-prettier/peer/eslint)
 ![](https://img.shields.io/amo/stars/dustman)![](https://img.shields.io/github/directory-file-count/Zwitter999/middle.messenger.praktikum.yandex)![](https://img.shields.io/tokei/lines/github/Zwitter999/middle.messenger.praktikum.yandex)
 
@@ -10,6 +10,19 @@
 Проект позволяет пользователям из любой точки мира коммуницировать благодаря чату.
 Функциональность чата позволяет осуществлять поиск по всем чатам, а так же добавлять и удалять пользователей.
 Проект имеет приятный дизайн и обработку ошибок.
+
+## Версии
+
+- 1.1
+  - Дизайн
+  - Архитектура проекта
+- 1.2
+  - Валидация ошибок формы
+  - Компонентный подход
+  - Архитектура MVC
+  - Класс для работы с API
+  - TypeScript
+- 1.3 COMMING SOON!
 
 ## Установка
 

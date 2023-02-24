@@ -1,28 +1,22 @@
-import ChangeAvatarModal from './Components/utils/ChangeAvatarModal/ChangeAvatarModal';
-import Header from './Components/Header/Header';
-import ChatsPage from './Pages/ChatsPage/ChatsPage';
-import AddDeleteUserModal from './Components/AddDeleteUserModal/AddDeleteUserModal';
-import ProfilePage from './Pages/ProfilePage/ProfilePage';
-import ChangePasswordModal from './Components/ChangePasswordModal/ChangePasswordModal';
-import LoginPage from './Pages/LoginPage/LoginPage';
-import SignupPage from './Pages/SignupPage/SignupPage';
-import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
-import ServerErrorPage from './Pages/ServerErrorPage/ServerErrorPage';
+import Header from './ui/components/Header/Header';
+import Block from './ui/utils/Block';
 
-window.ChangeAvatarModal = ChangeAvatarModal;
-window.ChatsPage = ChatsPage;
-window.AddDeleteUserModal = AddDeleteUserModal;
-window.ProfilePage = ProfilePage;
-window.LoginPage = LoginPage;
-window.SignupPage = SignupPage;
-window.NotFoundPage = NotFoundPage;
-window.ServerErrorPage = ServerErrorPage;
-window.ChangePasswordModal = ChangePasswordModal;
+function render(query: string, block: Block) {
+  const root = document.querySelector(query);
+
+  if (root === null) {
+    throw new Error(`root not found by selector "${query}"`);
+  }
+
+  root.innerHTML = '';
+
+  root.append(block.getContent()!);
+
+  return root;
+}
 
 function App() {
-  // Header для удобства просмотра страниц при code review,
-  // после сдачи первого спринта будет удален
-  Header();
+  render('header', new Header());
 }
 
 export default App;

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import "./src//utils/_variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import './src/ui/utils/variables';
 
 #root,
 body {
@@ -16,7 +16,7 @@ body {
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 200;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -92,7 +92,7 @@ button:hover {
   visibility: hidden;
 }
 
-input[type="file"] {
+input[type='file'] {
   height: 0;
   visibility: hidden;
 }

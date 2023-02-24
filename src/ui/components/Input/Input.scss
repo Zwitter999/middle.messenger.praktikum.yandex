@@ -1,0 +1,11 @@
+@import './../../utils/_variables.scss';
+
+.input {
+  border-radius: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 2.5em;
+  font-size: 18px;
+  color: #fff;
+  background-color: $dark-color;
+}
