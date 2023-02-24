@@ -14,7 +14,7 @@
   "targets": {
     "main": false
   },
-  "devDependencies": {
+  "dependencies": {
     "@parcel/transformer-sass": "2.8.3",
     "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
@@ -33,9 +33,7 @@
     "stylelint": "^15.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
     "stylelint-order": "^6.0.2",
-    "stylelint-scss": "^4.4.0"
-  },
-  "dependencies": {
+    "stylelint-scss": "^4.4.0",
     "lit": "2.6.1",
     "nanoid": "^4.0.1"
   }
