@@ -1,8 +1,3 @@
 {
-  "extends": "@parcel/config-default",
-  "transformers": {
-    "*.scss": [
-      "@parcel/transformer-sass"
-    ]
-  }
+  "extends": "@parcel/config-default"
 }
