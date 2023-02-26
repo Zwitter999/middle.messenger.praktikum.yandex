@@ -202,6 +202,14 @@ class Block<P extends Record<string, any> = any> {
       },
     });
   }
+
+  _removeEvents(): void {
+    const { events = {} } = this.props;
+
+    Object.keys(events).forEach((eventName: string) => {
+      this._element!.removeEventListener(eventName, events[eventName]);
+    });
+  }
 }
 
 export default Block;

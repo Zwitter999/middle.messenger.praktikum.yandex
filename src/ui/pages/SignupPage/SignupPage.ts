@@ -9,7 +9,7 @@ const inputs: InputProps[] = [
   { placeholder: 'Sacond name...', name: 'second_name' },
   { placeholder: 'Login...', name: 'login' },
   { placeholder: 'Email...', name: 'email' },
-  { placeholder: 'Password...', name: 'assword' },
+  { placeholder: 'Password...', name: 'password' },
   { placeholder: 'Phone number...', name: 'phone' },
 ];
 

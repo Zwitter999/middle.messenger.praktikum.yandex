@@ -15,7 +15,7 @@ const ROUTES = {
 };
 
 function renderDOM(route: keyof typeof ROUTES) {
-  const root = document.querySelector('#root')!;
+  const root = document.querySelector('main')!;
 
   root.innerHTML = '';
 
