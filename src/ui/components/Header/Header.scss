@@ -1,0 +1,16 @@
+@import './../../utils/_variables.scss';
+
+.header {
+  height: $header-height;
+  background-color: $light-color;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+      padding: 10px 20px;
+    }
+  }
+}

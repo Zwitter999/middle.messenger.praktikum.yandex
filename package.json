@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html --open",
-    "build": "parcel build index.html --dist-dir=build",
-    "start": "npm run build && node ./server.js"
+    "dev": "parcel index.html --open --no-cache",
+    "build": "parcel build index.html --dist-dir=build --no-cache",
+    "start": "npm run build && node ./server.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,9 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.8.3",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
     "eslint": "8.33.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.6.0",
@@ -26,9 +29,15 @@
     "eslint-plugin-promise": "6.1.1",
     "express": "4.18.2",
     "parcel": "2.8.3",
-    "prettier": "2.8.3"
+    "prettier": "2.8.3",
+    "stylelint": "^15.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "stylelint-order": "^6.0.2",
+    "stylelint-scss": "^4.4.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
-    "lit": "2.6.1"
+    "lit": "2.6.1",
+    "nanoid": "^4.0.1"
   }
 }
