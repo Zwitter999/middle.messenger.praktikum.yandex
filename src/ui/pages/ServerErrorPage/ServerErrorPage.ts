@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import Button from '../../components/Button/Button';
 import ModalPage from '../../components/ModalPage/ModalPage';
 import './ServerErrorPage';

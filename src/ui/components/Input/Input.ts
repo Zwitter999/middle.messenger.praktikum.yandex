@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import { html } from 'lit';
 import './Input.scss';
 

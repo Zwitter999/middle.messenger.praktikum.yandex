@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import Modal from '../Modal/Modal';
 import { InputProps } from '../../components/Input/Input';
 import Form from '../../components/Form/Form';

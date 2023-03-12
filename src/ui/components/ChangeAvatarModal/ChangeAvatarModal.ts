@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import Button from '../../components/Button/Button';
 import Modal from '../Modal/Modal';
 import ErrorText from '../Errortext/ErrorText';

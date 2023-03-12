@@ -1,5 +1,5 @@
-import Block from './Block';
-import getNestedObject from '../../utils/getNestedObject';
+import Block from '../../utils/Block';
+import { getNestedObject } from '../../utils/helpers';
 interface Templator {
   _template: string;
 }

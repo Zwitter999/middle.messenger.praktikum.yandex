@@ -1,22 +1,47 @@
-import Header from './ui/components/Header/Header';
-import Block from './ui/utils/Block';
+import Router from './utils/Router';
+import LoginPage from './ui/pages/LoginPage/LoginPage';
+import SignupPage from './ui/pages/SignupPage/SignupPage';
+import ProfilePage from './ui/pages/ProfilePage/ProfilePage';
+import ChatsPage from './ui/pages/ChatsPage/ChatsPage';
 
-function render(query: string, block: Block) {
-  const root = document.querySelector(query);
-
-  if (root === null) {
-    throw new Error(`root not found by selector "${query}"`);
-  }
-
-  root.innerHTML = '';
-
-  root.append(block.getContent()!);
-
-  return root;
+enum Routes {
+  Index = '/',
+  Signup = '/signup',
+  Profile = '/profile',
+  Messenger = '/messenger',
 }
 
-function App() {
-  render('header', new Header());
+async function App() {
+  Router.use(Routes.Index, LoginPage)
+    .use(Routes.Signup, SignupPage)
+    .use(Routes.Profile, ProfilePage)
+    .use(Routes.Messenger, ChatsPage);
+
+  // let isProtectedRoute = true;
+
+  switch (window.location.pathname) {
+    case Routes.Index:
+    case Routes.Signup:
+      // isProtectedRoute = false;
+      break;
+  }
+  Router.start();
+
+  // try {
+  //   await AuthController.fetchUser();
+
+  //   Router.start();
+
+  //   if (!isProtectedRoute) {
+  //     Router.go(Routes.Profile)
+  //   }
+  // } catch (e) {
+  //   Router.start();
+
+  //   if (isProtectedRoute) {
+  //     Router.go(Routes.Index);
+  //   }
+  // }
 }
 
 export default App;

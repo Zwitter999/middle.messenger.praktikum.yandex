@@ -14,4 +14,4 @@ declare global {
   }
 }
 
-App();
+window.addEventListener('DOMContentLoaded', App);

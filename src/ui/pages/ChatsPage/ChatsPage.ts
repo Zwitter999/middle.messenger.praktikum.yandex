@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import './ChatsPage.scss';
 import ValidateFormsController from '../../../controllers/validateFormsController';
 
