@@ -4,7 +4,7 @@ declare global {
   interface Window {
     ChangeAvatarModal: any;
     ChatsPage: any;
-    AddDeleteUserModal: any;
+    AddUserModal: any;
     ProfilePage: any;
     LoginPage: any;
     SignupPage: any;

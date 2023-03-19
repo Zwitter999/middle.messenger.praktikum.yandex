@@ -44,9 +44,10 @@ export default class HTTPTransport {
     });
   }
 
-  public delete<Response>(path: string): Promise<Response> {
+  public delete<Response>(path: string, data: unknown): Promise<Response> {
     return this.request<Response>(this.endpoint + path, {
       method: Method.Delete,
+      data,
     });
   }
 
@@ -70,8 +71,9 @@ export default class HTTPTransport {
       xhr.onabort = () => reject({ reason: 'abort' });
       xhr.onerror = () => reject({ reason: 'network error' });
       xhr.ontimeout = () => reject({ reason: 'timeout' });
-
-      xhr.setRequestHeader('Content-Type', 'application/json');
+      if (!(data instanceof FormData)) {
+        xhr.setRequestHeader('Content-Type', 'application/json');
+      }
 
       xhr.withCredentials = true;
       xhr.responseType = 'json';
@@ -79,7 +81,11 @@ export default class HTTPTransport {
       if (method === Method.Get || !data) {
         xhr.send();
       } else {
-        xhr.send(JSON.stringify(data));
+        if (data instanceof FormData) {
+          xhr.send(data);
+        } else {
+          xhr.send(JSON.stringify(data));
+        }
       }
     });
   }

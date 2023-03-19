@@ -10,6 +10,7 @@ interface FormProps {
   buttonName: string;
   inputs: InputProps[] | ProfileInputProps[];
   type?: string;
+  onSubmit: Function;
 }
 
 class Form extends Block<FormProps> {
@@ -24,7 +25,21 @@ class Form extends Block<FormProps> {
       events: {
         click: event => {
           event.preventDefault();
-          ValidateFormsController.onSubmit(this);
+          if (ValidateFormsController.onSubmit(this)) {
+            const values = [...event.target.parentElement].slice(0, -1).map(input => {
+              // const input = div.getElementsByTagName('input')[0];
+              return [input.name, input.name !== 'avatar' ? input.value : input.files[0]];
+            });
+            const preData = Object.fromEntries(values);
+            let data;
+            if (preData.avatar) {
+              data = new FormData();
+              data.append('avatar', preData.avatar);
+            } else {
+              data = preData;
+            }
+            this.props.onSubmit(data);
+          }
         },
       },
     });

@@ -210,6 +210,14 @@ class Block<P extends Record<string, any> = any> {
       this._element!.removeEventListener(eventName, events[eventName]);
     });
   }
+
+  show() {
+    this.getContent()!.style.display = 'flex';
+  }
+
+  hide() {
+    this.getContent()!.style.display = 'none';
+  }
 }
 
 export default Block;

@@ -14,6 +14,18 @@ class Input extends Block<InputProps> {
     super({ ...props });
   }
 
+  public setValue(value: string) {
+    return ((this.element as HTMLInputElement).value = value);
+  }
+
+  public getName() {
+    return (this.element as HTMLInputElement).name;
+  }
+
+  public getValue() {
+    return (this.element as HTMLInputElement).value;
+  }
+
   render() {
     const template: any = html`
       <input class="input" placeholder="{{ placeholder }}" name="{{ name }}" type="{{ type }}" />

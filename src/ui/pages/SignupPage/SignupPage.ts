@@ -3,6 +3,7 @@ import ModalPage from '../../components/ModalPage/ModalPage';
 import { InputProps } from '../../components/Input/Input';
 import Form from '../../components/Form/Form';
 import { Link } from '../../components/Link/Link';
+import AuthController from '../../../controllers/AuthController';
 import './SignupPage';
 
 const inputs: InputProps[] = [
@@ -23,6 +24,7 @@ class SignupPage extends Block {
     this.children.form = new Form({
       buttonName: 'Signup',
       inputs,
+      onSubmit: AuthController.signup.bind(AuthController),
     });
     this.children.link = new Link({
       to: '/',
