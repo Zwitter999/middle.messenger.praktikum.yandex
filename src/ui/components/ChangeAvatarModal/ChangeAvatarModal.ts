@@ -40,14 +40,6 @@ class ChangeAvatarModalBase extends Block {
 
   render() {
     const template: string = `<div class="load-file">{{ form }}</div>`;
-    // const template: string = `<form class="modal-form">
-    // <div class="load-file">
-    //   <label for="files">{{ text }}</label>
-    //   <input id="files" name="avatar" type="file">
-    //   ${
-    //     this.props.errors?.inputAvatar ? new ErrorText({ text: this.props.errors.inputAvatar }).element?.outerHTML! : ''
-    //   }
-    // </div>`;
     return this.compile(
       new Modal({ title: 'Change avatar', modalContent: template, isActive: this.props.isActive }).element?.outerHTML!,
       {

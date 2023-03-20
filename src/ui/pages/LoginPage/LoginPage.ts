@@ -4,6 +4,7 @@ import { InputProps } from '../../components/Input/Input';
 import Form from '../../components/Form/Form';
 import { Link } from '../../components/Link/Link';
 import AuthController from '../../../controllers/AuthController';
+import { Routes } from '../../../App';
 
 const inputs: InputProps[] = [
   { placeholder: 'Login...', name: 'login' },
@@ -21,7 +22,7 @@ class LoginPage extends Block {
       onSubmit: AuthController.signin.bind(AuthController),
     });
     this.children.link = new Link({
-      to: '/signup',
+      to: Routes.Signup,
       label: 'Signup',
     });
   }

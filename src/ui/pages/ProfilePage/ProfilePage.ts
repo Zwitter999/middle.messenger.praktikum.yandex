@@ -7,6 +7,8 @@ import AuthController from '../../../controllers/AuthController';
 import UserController from '../../../controllers/UserController';
 import ChangePasswordModal from '../../components/ChangePasswordModal/ChangePasswordModal';
 import ChangeAvatarModal from '../../components/ChangeAvatarModal/ChangeAvatarModal';
+import { Link } from '../../components/Link/Link';
+import { Routes } from '../../../App';
 
 interface ProfilePageBaseProps {
   errors?: Record<string, string>;
@@ -62,9 +64,10 @@ class Avatar extends Block<AvatarProps> {
   }
 
   render() {
+    const { avatar } = this.props;
     const template: string = `
     <div class="profile-page__avatar">
-      <img src="https://ya-praktikum.tech/api/v2/resources${this.props.avatar}" alt="Empty"/>
+      ${avatar ? `<img src="https://ya-praktikum.tech/api/v2/resources${avatar}" alt="avatar"/>` : ''}
       <span class="avatar__text">Change avatar</span>
     </div>`;
     return this.compile(template, { ...this.props });
@@ -130,6 +133,7 @@ class ProfilePageBase extends Block<ProfilePageBaseProps> {
         },
       },
     });
+    this.children.chatsLink = new Link({ to: Routes.Messenger, label: 'Chats' });
   }
 
   render() {
@@ -137,8 +141,9 @@ class ProfilePageBase extends Block<ProfilePageBaseProps> {
     <div class="profile-page">
     {{ avatar }}
     <div class="profile-page__name">
-      {{ user.first_name }}
+    {{ user.first_name }}
     </div>
+    {{chatsLink}}
       <form class="profile-page__info">
       ${
         this.props.profileEditMode

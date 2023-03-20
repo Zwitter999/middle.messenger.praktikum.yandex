@@ -8,6 +8,7 @@ import { Messenger } from '../../components/Messenger/Messenger';
 import { Link } from '../../components/Link/Link';
 import AddUserModal from '../../components/AddUserModal/AddUserModal';
 import DeleteUserModal from '../../components/DeleteUserModal/DeleteUserModal';
+import { Routes } from '../../../App';
 
 interface SideBarButtonProps {
   text: string;
@@ -32,7 +33,7 @@ class ChatsPageBase extends Block {
   }
 
   init() {
-    this.children.editProfile = new Link({ to: '/profile', label: 'Edit profile' });
+    this.children.editProfile = new Link({ to: Routes.Profile, label: 'Edit profile' });
     this.children.addChat = new SideBarButton({
       text: '+ Add chat',
       events: { click: () => store.set('AddChatModalIsOpen', true) },

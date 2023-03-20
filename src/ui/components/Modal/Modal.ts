@@ -15,9 +15,10 @@ class Modal extends Block<ModalProps> {
   }
 
   render() {
+    const { isActive } = this.props;
     const template: any = `
-    <div class="modal ${this.props.isActive ? 'modal-active' : ''}">
-      <div class="modal__container ${this.props.isActive ? 'modal__content-active' : ''} modal-window">
+    <div class="modal ${isActive ? 'modal_active' : ''}">
+      <div class="modal__container ${isActive ? 'modal__container_active' : ''} modal-window">
           <h1 class="modal__title">{{ title }}</h1>
           {{ modalContent }}
       </div>

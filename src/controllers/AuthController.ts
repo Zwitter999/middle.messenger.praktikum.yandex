@@ -1,6 +1,7 @@
 import API, { AuthAPI, SigninData, SignupData } from '../api/AuthAPI';
 import store from '../utils/Store';
 import router from '../utils/Router';
+import { Routes } from '../App';
 
 class AuthController {
   private readonly api: AuthAPI;
@@ -13,7 +14,7 @@ class AuthController {
     try {
       await this.api.signin(data);
 
-      router.go('/profile');
+      router.go(Routes.Profile);
     } catch (e: any) {
       console.error(e);
     }
@@ -26,7 +27,7 @@ class AuthController {
 
       await this.fetchUser();
 
-      router.go('/profile');
+      router.go(Routes.Profile);
     } catch (e: any) {
       console.error(e.message);
     }
@@ -42,7 +43,7 @@ class AuthController {
     try {
       await this.api.logout();
 
-      router.go('/');
+      router.go(Routes.Index);
     } catch (e: any) {
       console.error(e.message);
     }

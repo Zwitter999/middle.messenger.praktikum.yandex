@@ -5,10 +5,10 @@ import ProfilePage from './ui/pages/ProfilePage/ProfilePage';
 import ChatsPage from './ui/pages/ChatsPage/ChatsPage';
 import AuthController from './controllers/AuthController';
 
-enum Routes {
+export enum Routes {
   Index = '/',
-  Signup = '/signup',
-  Profile = '/profile',
+  Signup = '/sign-up',
+  Profile = '/settings',
   Messenger = '/messenger',
 }
 
@@ -33,7 +33,7 @@ async function App() {
     Router.start();
 
     if (!isProtectedRoute) {
-      Router.go(Routes.Profile);
+      Router.go(Routes.Messenger);
     }
   } catch (e) {
     Router.start();

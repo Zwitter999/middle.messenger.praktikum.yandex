@@ -20,7 +20,7 @@ class ChatBase extends Block<ChatProps> {
   }
 
   render() {
-    const template: any = `
+    const template: string = `
     <div class="chat ${this.props.selectedChat ? 'chat__active' : ''}">
     <div class="chat__avatar"></div>
     <div class="chat__content">

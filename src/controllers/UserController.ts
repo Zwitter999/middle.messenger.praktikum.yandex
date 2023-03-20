@@ -1,6 +1,7 @@
 import API, { UserAPI, ChangeProfileData, ChangePasswordData, ChangeAvatarData } from './../api/UserAPI';
 import router from '../utils/Router';
 import store from '../utils/Store';
+import { Routes } from '../App';
 
 class UserController {
   private readonly api: UserAPI;
@@ -12,7 +13,7 @@ class UserController {
   async changeProfile(data: ChangeProfileData) {
     try {
       const user = await this.api.changeProfile(data);
-      router.go('/profile');
+      router.go(Routes.Profile);
       store.set('ProfileEditMode', false);
       store.set('user', user);
     } catch (e: any) {
@@ -23,7 +24,7 @@ class UserController {
   async changePassword(data: ChangePasswordData) {
     try {
       await this.api.changePassword(data);
-      router.go('/profile');
+      router.go(Routes.Profile);
       store.set('ChangePasswordModalIsOpen', false);
     } catch (e: any) {
       console.error(e.message);
@@ -34,7 +35,7 @@ class UserController {
     try {
       await this.api.changeAvatar(data);
       store.set('ChangeAvatarModalIsOpen', false);
-      router.go('/profile');
+      router.go(Routes.Profile);
     } catch (e: any) {
       console.error(e.message);
     }

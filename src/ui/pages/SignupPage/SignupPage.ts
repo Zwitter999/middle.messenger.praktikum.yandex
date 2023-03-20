@@ -5,6 +5,7 @@ import Form from '../../components/Form/Form';
 import { Link } from '../../components/Link/Link';
 import AuthController from '../../../controllers/AuthController';
 import './SignupPage';
+import { Routes } from '../../../App';
 
 const inputs: InputProps[] = [
   { placeholder: 'Name...', name: 'first_name' },
@@ -27,7 +28,7 @@ class SignupPage extends Block {
       onSubmit: AuthController.signup.bind(AuthController),
     });
     this.children.link = new Link({
-      to: '/',
+      to: Routes.Index,
       label: 'Login',
     });
   }
