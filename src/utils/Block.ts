@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { EventBus } from './EventBus';
 import { nanoid } from 'nanoid';
-import Templator from './Templator';
+import Templator from '../ui/utils/Templator';
 
 class Block<P extends Record<string, any> = any> {
   static EVENTS = {
@@ -209,6 +209,14 @@ class Block<P extends Record<string, any> = any> {
     Object.keys(events).forEach((eventName: string) => {
       this._element!.removeEventListener(eventName, events[eventName]);
     });
+  }
+
+  show() {
+    this.getContent()!.style.display = 'flex';
+  }
+
+  hide() {
+    this.getContent()!.style.display = 'none';
   }
 }
 

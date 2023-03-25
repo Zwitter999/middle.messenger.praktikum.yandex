@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import { html } from 'lit';
 import './Input.scss';
 
@@ -12,6 +12,18 @@ export interface InputProps {
 class Input extends Block<InputProps> {
   constructor(props: InputProps) {
     super({ ...props });
+  }
+
+  public setValue(value: string) {
+    return ((this.element as HTMLInputElement).value = value);
+  }
+
+  public getName() {
+    return (this.element as HTMLInputElement).name;
+  }
+
+  public getValue() {
+    return (this.element as HTMLInputElement).value;
   }
 
   render() {

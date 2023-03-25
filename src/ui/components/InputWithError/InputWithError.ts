@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/named
-import Block from '../../utils/Block';
+import Block from '../../../utils/Block';
 import Input, { InputProps } from '../Input/Input';
 import ErrorText, { ErrorTextProps } from '../Errortext/ErrorText';
 import ValidateFormsController from '../../../controllers/validateFormsController';

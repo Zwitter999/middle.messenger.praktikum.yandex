@@ -6,8 +6,9 @@ class ValidateFormsController {
     } else if (
       type !== 'password' &&
       type !== 'phone' &&
-      type !== 'old_password' &&
-      type !== 'new_password' &&
+      type !== 'oldPassword' &&
+      type !== 'newPassword' &&
+      type !== 'avatar' &&
       !(/^[A-z0-9-_+. ,@]{1,}$/gi.test(value) && /[A-z]/.test(value))
     ) {
       error = 'Invalid character';
@@ -24,8 +25,8 @@ class ValidateFormsController {
       !value.match(/^(\+7|7|8)?[\s-]?\(?[489][0-9]{2}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$/)
     ) {
       error = 'Invalid phone';
-    } else if (type === 'new_password' && value !== page.children.oldPassword.element.parentElement[0].value) {
-      error = 'Passwords mismatch';
+    } else if (type === 'newPassword' && value == page.children.oldPassword?.element.parentElement[0].value) {
+      error = 'Passwords simple';
     }
     page.setProps({
       text: error,
@@ -37,14 +38,19 @@ class ValidateFormsController {
   }
 
   onSubmit(page: any) {
+    let error = false;
     page.children.inputs.map((input: any) => {
-      console.log(input.children.inputChild.props.name, input.children.inputChild.element.value);
-      this.onBlurFocus(
-        input.children.errorText,
-        input.children.inputChild.element.value,
-        input.children.inputChild.props.name,
-      );
+      if (
+        this.onBlurFocus(
+          input.children.errorText,
+          input.children.inputChild.element.value,
+          input.children.inputChild.props.name,
+        )
+      ) {
+        error = true;
+      }
     });
+    return error;
   }
 }
 
