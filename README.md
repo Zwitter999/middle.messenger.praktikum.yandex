@@ -2,6 +2,8 @@
 
 # [Sprint_2](https://github.com/Zwitter999/middle.messenger.praktikum.yandex/pull/5)
 
+# [Sprint_3](https://github.com/Zwitter999/middle.messenger.praktikum.yandex/pull/6)
+
 ## Бейджи
 
 ![](https://img.shields.io/badge/node-v16.13.0-brightgreen)![](https://img.shields.io/bower/l/mi)![](https://img.shields.io/npm/dependency-version/eslint-config-prettier/peer/eslint)
