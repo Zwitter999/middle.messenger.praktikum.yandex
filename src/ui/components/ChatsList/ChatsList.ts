@@ -2,7 +2,6 @@ import Block from '../../../utils/Block';
 import { Chat } from '../Chat/Chat';
 import { withStore } from '../../../utils/Store';
 import { ChatInfo } from '../../../api/ChatsAPI';
-import { Link } from '../Link/Link';
 import ChatsController from '../../../controllers/ChatsController';
 import './ChatsList.scss';
 
@@ -47,4 +46,5 @@ class ChatsListBase extends Block<ChatsListProps> {
 
 const withChats = withStore(state => ({ chats: [...(state.chats || [])] }));
 
+// @ts-ignore
 export const ChatsList = withChats(ChatsListBase);

@@ -3,7 +3,7 @@ import { Message } from '../Message/Message';
 import Input from '../Input/Input';
 import MessagesController, { Message as MessageInfo } from './../../../controllers/MessagesController';
 import store, { withStore } from '../../../utils/Store';
-import ValidateFormsController from '../../../controllers/validateFormsController';
+import ValidateFormsController from '../../../controllers/ValidateFormsController';
 
 interface HeaderMenuButtonProps {
   text: string;
@@ -136,7 +136,7 @@ class MessengerBase extends Block<MessengerProps> {
     });
   }
 
-  protected componentDidUpdate(oldProps: MessengerProps, newProps: MessengerProps): boolean {
+  protected componentDidUpdate(_oldProps: MessengerProps, newProps: MessengerProps): boolean {
     this.children.messages = this.createMessages(newProps);
 
     return true;
@@ -187,4 +187,5 @@ const withSelectedChatMessages = withStore(state => {
   };
 });
 
+// @ts-ignore
 export const Messenger = withSelectedChatMessages(MessengerBase);

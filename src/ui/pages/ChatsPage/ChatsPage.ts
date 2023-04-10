@@ -33,6 +33,7 @@ class ChatsPageBase extends Block {
   }
 
   init() {
+    // @ts-ignore
     this.children.editProfile = new Link({ to: Routes.Profile, label: 'Edit profile' });
     this.children.addChat = new SideBarButton({
       text: '+ Add chat',
@@ -91,6 +92,7 @@ class ChatsPageBase extends Block {
 }
 
 const withChats = withStore(state => ({
+  // @ts-ignore
   selectedChat: (state.chats || []).find(({ id }) => id === state.selectedChat),
 }));
 

@@ -1,0 +1,4 @@
+{
+  "extensions": ["ts"],
+  "test": ["**/*.test.*"]
+}

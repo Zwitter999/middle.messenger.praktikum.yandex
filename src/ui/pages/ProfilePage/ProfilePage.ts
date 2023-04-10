@@ -9,6 +9,7 @@ import ChangePasswordModal from '../../components/ChangePasswordModal/ChangePass
 import ChangeAvatarModal from '../../components/ChangeAvatarModal/ChangeAvatarModal';
 import { Link } from '../../components/Link/Link';
 import { Routes } from '../../../App';
+import Router from '../../../utils/Router';
 
 interface ProfilePageBaseProps {
   errors?: Record<string, string>;
@@ -133,7 +134,7 @@ class ProfilePageBase extends Block<ProfilePageBaseProps> {
         },
       },
     });
-    this.children.chatsLink = new Link({ to: Routes.Messenger, label: 'Chats' });
+    this.children.chatsLink = new Link({ to: Routes.Messenger, label: 'Chats', router: Router });
   }
 
   render() {
@@ -165,5 +166,6 @@ class ProfilePageBase extends Block<ProfilePageBaseProps> {
 
 const withUser = withStore(state => ({ user: state.user, profileEditMode: state.ProfileEditMode }));
 
+// @ts-ignore
 const ProfilePage = withUser(ProfilePageBase);
 export default ProfilePage;

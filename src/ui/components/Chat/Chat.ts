@@ -39,7 +39,9 @@ class ChatBase extends Block<ChatProps> {
 }
 
 export const withSelectedChat = withStore(state => ({
+  // @ts-ignore
   selectedChat: (state.chats || []).find(({ id }) => id === state.selectedChat),
 }));
 
+// @ts-ignore
 export const Chat = withSelectedChat(ChatBase);

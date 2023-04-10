@@ -1,7 +1,7 @@
 import Block from '../../../utils/Block';
 import Input, { InputProps } from '../Input/Input';
 import ErrorText, { ErrorTextProps } from '../Errortext/ErrorText';
-import ValidateFormsController from '../../../controllers/validateFormsController';
+import ValidateFormsController from '../../../controllers/ValidateFormsController';
 import { ProfileInput, ProfileInputProps } from '../../pages/ProfilePage/ProfilePage';
 import './InputWithError.scss';
 
