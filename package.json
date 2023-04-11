@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node server.js",
     "dev": "webpack-dev-server --config webpack.config.js --hot",
-    "build": "webpack --mode production",
+    "build": "node ./node_modules/.bin/webpack",
     "start": "npm run build && server",
     "test": "mocha --require ts-node/register --require ./mochaSetup.js \"./src/**/*.test.ts\""
   },
