@@ -1,4 +1,4 @@
-@import "./../../utils/_variables.scss";
+@import './../../utils/_variables.scss';
 
 .modal-page {
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
   margin: 0 auto;
   width: 30em;
-  height: calc(100vh - $header-height);
+  height: 100vh;
 
   .modal-page__modal {
     input,

@@ -1,4 +1,4 @@
-@import "./../../utils/_variables.scss";
+@import './../../utils/_variables.scss';
 
 $avatar-cicrle: 10em;
 
@@ -10,7 +10,7 @@ $avatar-cicrle: 10em;
   margin-right: auto;
   margin-left: auto;
   width: 60em;
-  height: calc(100vh - $header-height);
+  height: 100vh;
 
   .profile-page__avatar {
     position: relative;
