@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Inter&display=swap";
 @import "./src/ui/utils/_variables.scss";
 
 #root,
@@ -9,18 +9,17 @@ body {
 
 .not-copy-text {
   user-select: none;
-  user-select: none;
 }
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-weight: 200;
   font-size: 0.9rem;
   line-height: 1.5;
   text-size-adjust: 100%;
   color: #fff;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   background-color: $dark-color;
 }
 
