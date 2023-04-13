@@ -46,7 +46,8 @@ class ChatsController {
 
   async delete(id: number) {
     await this.api.delete(id);
-
+    store.set('selectedChat', undefined);
+    store.set('ChatMenuIsOpen', false);
     this.fetchChats();
   }
 
