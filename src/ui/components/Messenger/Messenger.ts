@@ -3,7 +3,8 @@ import { Message } from '../Message/Message';
 import Input from '../Input/Input';
 import MessagesController, { Message as MessageInfo } from './../../../controllers/MessagesController';
 import store, { withStore } from '../../../utils/Store';
-import ValidateFormsController from '../../../controllers/validateFormsController';
+import ValidateFormsController from '../../../controllers/ValidateFormsController';
+import ChatsController from '../../../controllers/ChatsController';
 
 interface HeaderMenuButtonProps {
   text: string;
@@ -29,7 +30,6 @@ const headerMenuButtonsList: HeaderMenuButtonProps[] = [
   { text: 'Change avatar' },
   { text: '+ Add user', events: { click: () => store.set('addUserModalisOpen', true) } },
   { text: '- Delete user', events: { click: () => store.set('deleteUserModalisOpen', true) } },
-  { text: 'Delete chat' },
 ];
 
 interface MessengerProps {
@@ -107,7 +107,10 @@ class MessengerBase extends Block<MessengerProps> {
       name: 'message',
     });
 
-    this.children.headerMenuButtons = headerMenuButtonsList.map(headerMenuButton => {
+    this.children.headerMenuButtons = [
+      ...headerMenuButtonsList,
+      { text: 'Delete chat', events: { click: () => ChatsController.delete(this.props.selectedChat as number) } },
+    ].map(headerMenuButton => {
       return new HeaderMenuButton(headerMenuButton);
     });
 
@@ -136,7 +139,7 @@ class MessengerBase extends Block<MessengerProps> {
     });
   }
 
-  protected componentDidUpdate(oldProps: MessengerProps, newProps: MessengerProps): boolean {
+  protected componentDidUpdate(_oldProps: MessengerProps, newProps: MessengerProps): boolean {
     this.children.messages = this.createMessages(newProps);
 
     return true;
@@ -187,4 +190,5 @@ const withSelectedChatMessages = withStore(state => {
   };
 });
 
+// @ts-ignore
 export const Messenger = withSelectedChatMessages(MessengerBase);

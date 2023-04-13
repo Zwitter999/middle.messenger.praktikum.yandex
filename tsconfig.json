@@ -1,12 +1,22 @@
 {
   "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "declaration": false,
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "noImplicitAny": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "target": "es6",
-    "module": "ES2015",
-    "moduleResolution": "node"
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"]
+  },
+  "ts-node": {
+    "files": true
   }
 }

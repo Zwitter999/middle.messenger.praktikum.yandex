@@ -33,20 +33,21 @@ class ChatsController {
   async addUserToChat(data: {}) {
     const users = await UserController.searchUser(data);
     const id = store.getState().selectedChat;
-
+    // @ts-ignore
     this.api.addUsers(id, [users[0].id]);
   }
 
   async deleteUserFromChat(data: {}) {
     const users = await UserController.searchUser(data);
     const id = store.getState().selectedChat;
-
+    // @ts-ignore
     this.api.deleteUsers(id, [users[0].id]);
   }
 
   async delete(id: number) {
     await this.api.delete(id);
-
+    store.set('selectedChat', undefined);
+    store.set('ChatMenuIsOpen', false);
     this.fetchChats();
   }
 

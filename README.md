@@ -2,6 +2,8 @@
 
 # [Sprint_2](https://github.com/Zwitter999/middle.messenger.praktikum.yandex/pull/5)
 
+# [Sprint_3](https://github.com/Zwitter999/middle.messenger.praktikum.yandex/pull/6)
+
 ## Бейджи
 
 ![](https://img.shields.io/badge/node-v16.13.0-brightgreen)![](https://img.shields.io/bower/l/mi)![](https://img.shields.io/npm/dependency-version/eslint-config-prettier/peer/eslint)
@@ -29,7 +31,12 @@
   - Добавлен стор
   - Добавлено взаидодействие с чатам
   - Дабавлено редактирование профиля и смена аватара
-- 1.4 .........
+- 1.4
+  - Переход на Webpack
+  - Написаны автотесты
+  - Внедрение Docker
+  - Переезд на Яндекс Облако
+  - Добавлен precommit
 
 ## Установка
 
@@ -37,13 +44,15 @@
 - `npm run dev` — запуск версии для разработчика,
 - `npm run build` — сборка продакшен версии,
 - `npm run start` — запуск продакшен версии на localhost:3000.
+- `npm run test` — запуск автотестов
 
 ## Используемые технологии:
 
-- Parcel
+- Webpack
 - Eslint
 - Prettier
 - SCSS
+- Docker
 
 ## Дизайн
 
@@ -55,4 +64,4 @@ Yandex practicum team
 
 ## Продашкн
 
-[Netlify](https://benevolent-duckanoo-942326.netlify.app/)
+[Netlify](https://bbao1acbi1t2vui64985.containers.yandexcloud.net)

@@ -6,6 +6,7 @@ import { Link } from '../../components/Link/Link';
 import AuthController from '../../../controllers/AuthController';
 import './SignupPage';
 import { Routes } from '../../../App';
+import Router from '../../../utils/Router';
 
 const inputs: InputProps[] = [
   { placeholder: 'Name...', name: 'first_name' },
@@ -30,6 +31,7 @@ class SignupPage extends Block {
     this.children.link = new Link({
       to: Routes.Index,
       label: 'Login',
+      router: Router,
     });
   }
 

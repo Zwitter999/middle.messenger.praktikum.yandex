@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "import-notation": "string",
+    "no-descending-specificity": null,
+    "no-empty-source": null,
+    "selector-class-pattern": null
+  }
+}

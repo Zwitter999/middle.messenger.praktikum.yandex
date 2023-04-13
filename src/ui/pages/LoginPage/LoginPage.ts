@@ -5,6 +5,7 @@ import Form from '../../components/Form/Form';
 import { Link } from '../../components/Link/Link';
 import AuthController from '../../../controllers/AuthController';
 import { Routes } from '../../../App';
+import Router from '../../../utils/Router';
 
 const inputs: InputProps[] = [
   { placeholder: 'Login...', name: 'login' },
@@ -24,6 +25,7 @@ class LoginPage extends Block {
     this.children.link = new Link({
       to: Routes.Signup,
       label: 'Signup',
+      router: Router,
     });
   }
 

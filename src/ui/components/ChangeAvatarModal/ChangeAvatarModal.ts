@@ -2,7 +2,7 @@ import Block from '../../../utils/Block';
 import Button from '../../components/Button/Button';
 import Modal from '../Modal/Modal';
 import './ChangeAvatarModal.scss';
-import ValidateFormsController from '../../../controllers/validateFormsController';
+import ValidateFormsController from '../../../controllers/ValidateFormsController';
 import store, { withStore } from '../../../utils/Store';
 import Form from '../Form/Form';
 import UserController from '../../../controllers/UserController';

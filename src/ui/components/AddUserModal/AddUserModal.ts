@@ -54,6 +54,7 @@ class AddUserModalBase extends Block<AddUserModalProps> {
 
 const withModal = withStore(state => ({ isActive: state.addUserModalisOpen }));
 
+// @ts-ignore
 const AddUserModal = withModal(AddUserModalBase);
 
 export default AddUserModal;

@@ -54,6 +54,7 @@ class DeleteUserModalBase extends Block<DeleteUserModalProps> {
 
 const withModal = withStore(state => ({ isActive: state.deleteUserModalisOpen }));
 
+// @ts-ignore
 const DeleteUserModal = withModal(DeleteUserModalBase);
 
 export default DeleteUserModal;

@@ -22,6 +22,7 @@ export class ChatsAPI extends BaseAPI {
     return this.http.post('/', body);
   }
 
+  // @ts-ignore
   delete(id: number): Promise<unknown> {
     return this.http.delete('/', { chatId: id });
   }

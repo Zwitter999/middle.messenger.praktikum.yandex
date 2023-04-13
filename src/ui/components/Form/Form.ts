@@ -2,7 +2,7 @@ import Block from '../../../utils/Block';
 import Button from '../../components/Button/Button';
 import { InputProps } from '../../components/Input/Input';
 import { ProfileInputProps } from '../../pages/ProfilePage/ProfilePage';
-import ValidateFormsController from '../../../controllers/validateFormsController';
+import ValidateFormsController from '../../../controllers/ValidateFormsController';
 import InputWithError from '../InputWithError/InputWithError';
 import './Form';
 

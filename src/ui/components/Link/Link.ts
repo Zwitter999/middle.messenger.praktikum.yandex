@@ -8,6 +8,7 @@ interface LinkProps {
   events?: {
     click: (event: any) => void;
   };
+  router: any;
 }
 
 class BaseLink extends Block<LinkProps> {
